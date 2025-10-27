@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+
+// 1. UPDATE THE IMPORT
+import ProjectItem, { type Repository } from './components/ProjectItem';
+import SearchInput from './components/SearchInput';
+import './App.css'; 
+
+// This is our fake data for testing the UI
+const FAKE_REPO: Repository = {
+  id: 12345,
+  name: 'react',
+  description:
+    'A declarative, efficient, and flexible JavaScript library for building user interfaces. This is a longer description to test clamping.',
+  stargazers_count: 215000,
+  language: 'TypeScript',
+  owner: {
+    avatar_url: 'https://avatars.githubusercontent.com/u/69631?v=4',
+  },
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <h1>GitHub Repo Search</h1>
+      {/* 1. ADD THE SEARCH INPUT HERE */}
+      <SearchInput />
+      <div className="project-list-container"> {/* Renamed class */}
+        {/* 2. UPDATE THE COMPONENT NAME */}
+        <ProjectItem repo={FAKE_REPO} />
+        <ProjectItem repo={FAKE_REPO} /> 
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

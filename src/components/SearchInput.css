@@ -1,0 +1,27 @@
+/* src/components/SearchInput.css */
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  color: #c9d1d9; /* Light text */
+  background-color: #0d1117; /* Dark background */
+  border: 1px solid #30363d; /* GitHub border */
+  border-radius: 6px;
+  box-sizing: border-box; /* Important for 100% width */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #58a6ff; /* Blue focus color */
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+.search-input::placeholder {
+  color: #484f58; /* GitHub placeholder color */
+}
