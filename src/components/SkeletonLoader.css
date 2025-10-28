@@ -1,0 +1,67 @@
+/* src/components/SkeletonLoader.css */
+/* Styles for the loading placeholder cards */
+
+/* simple pulsing animation to show loading state */
+@keyframes pulse {
+  0% {
+    background-color: #21262d; /* dark shade */
+  }
+  50% {
+    background-color: #30363d; /* lighter shade */
+  }
+  100% {
+    background-color: #21262d;
+  }
+}
+
+/* main skeleton card – matches the layout of real project cards */
+.skeleton-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background-color: #161b22;
+  margin-bottom: 12px;
+}
+
+/* apply pulsing effect to all skeleton elements */
+.skeleton-line,
+.skeleton-avatar {
+  animation: pulse 1.5s infinite ease-in-out;
+  border-radius: 4px;
+}
+
+/* circular avatar placeholder */
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* container for fake text lines */
+.skeleton-details {
+  flex: 1;
+  padding-top: 4px; /* slight alignment with avatar */
+}
+
+/* base style for fake text lines */
+.skeleton-line {
+  height: 16px;
+  margin-bottom: 10px;
+}
+
+/* different widths for title and description lines */
+.skeleton-title {
+  width: 40%;
+  height: 20px;
+}
+
+.skeleton-desc {
+  width: 90%;
+}
+
+.skeleton-desc-2 {
+  width: 60%;
+}

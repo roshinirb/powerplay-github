@@ -1,27 +1,56 @@
 /* src/components/SearchInput.css */
+/* Styles for the main search bar */
 
 .search-container {
   margin-bottom: 24px;
+  position: relative; /* lets us position the icon inside the input */
+
+  /* center the whole search bar */
+  margin-left: auto;
+  margin-right: auto;
+  /* max width is handled in App.css */
+}
+
+.search-icon {
+  position: absolute;
+  /* center the icon vertically inside the input */
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #484f58; /* same as placeholder color */
+  transition: color 0.2s; /* smooth color change on focus */
+
+  /* allows clicks to pass through to the input */
+  pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: 12px 16px;
-  font-size: 1rem;
-  color: #c9d1d9; /* Light text */
-  background-color: #0d1117; /* Dark background */
-  border: 1px solid #30363d; /* GitHub border */
-  border-radius: 6px;
-  box-sizing: border-box; /* Important for 100% width */
+  padding: 16px 20px 16px 48px; /* add space for icon on the left */
+  font-size: 1.1rem;
+  border-radius: 24px;
+
+  color: #c9d1d9;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+
+  box-sizing: border-box; /* keeps layout consistent */
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+/* add a subtle blue glow when the input is focused */
 .search-input:focus {
   outline: none;
-  border-color: #58a6ff; /* Blue focus color */
-  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
 }
 
 .search-input::placeholder {
-  color: #484f58; /* GitHub placeholder color */
+  color: #484f58;
+}
+
+/* when input is focused, change icon color to blue */
+.search-container:focus-within .search-icon {
+  color: #58a6ff;
 }

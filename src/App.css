@@ -1,21 +1,46 @@
 /* src/App.css */
+/* Global styles for the app */
+
+/* reset + base styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif;
-  background-color: #0d1117; 
-  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background-color: #0d1117; /* dark GitHub theme */
+  color: #c9d1d9; /* light text */
+
+  /* center the app in the middle of the screen */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
+/* main wrapper for content */
 .container {
-  max-width: 800px;
+  width: 90vw;
+  max-width: 900px;
   margin: 0 auto;
   padding: 24px;
 }
 
+/* page title */
 h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
   color: #f0f6fc;
+  text-align: center;
+}
+
+/* error text (for API or validation messages) */
+.error-message {
+  color: #f85149;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* fallback and info text (no results, loading, etc.) */
+.project-list-container p {
+  text-align: center;
+  color: #8b949e;
+  font-size: 1.1rem;
 }

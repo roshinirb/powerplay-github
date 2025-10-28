@@ -1,0 +1,59 @@
+/* src/components/FilterToggle.css */
+/* Styles for the "Show Bookmarked Only" toggle switch */
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the toggle horizontally */
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.filter-toggle .label-text {
+  margin-left: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8b949e; /* Slightly muted text color for the label */
+}
+
+/* Hide the real checkbox completely.
+   The <label> around it will handle all click interactions. */
+.filter-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider track (the background part of the toggle) */
+.filter-toggle .slider {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 22px;
+  background-color: #30363d; /* Default "off" color */
+  border-radius: 34px; /* Gives it a pill shape */
+  transition: 0.4s;
+}
+
+/* The circular knob that slides left/right */
+.filter-toggle .slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* When the input is checked, change the background color
+   and move the knob to the right */
+.filter-toggle input:checked + .slider {
+  background-color: #1f6feb; /* Active state color */
+}
+
+.filter-toggle input:checked + .slider:before {
+  transform: translateX(18px);
+}
