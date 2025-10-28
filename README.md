@@ -1,9 +1,8 @@
-# 🚀 Github Repository Finder (Powerplay Frontend Intern Assignment)
+# 🚀 Github Repository Finder (Assignment)
 
 A tiny, production-ready **React + TypeScript** micro-app that lets users search and bookmark GitHub repositories.
 
-🔗 **[Live Demo →](https://your-deployed-link.vercel.app)**  
-*(Replace with your actual Vercel or Netlify link)*
+🔗 **https://powerplay-github.vercel.app/**  
 
 ---
 
