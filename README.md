@@ -59,13 +59,13 @@ npm install
 npm run dev
 
 ---
-
+```
 ##  Local Setup
 
 The app will be available at **http://localhost:5173**.
 
 ---
-```
+
 ##  Available Scripts
 
 | Command | Description |
