@@ -58,7 +58,6 @@ npm install
 # 4. Start the app
 npm run dev
 
----
 ```
 ##  Local Setup
 
