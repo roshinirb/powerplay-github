@@ -65,7 +65,7 @@ npm run dev
 The app will be available at **http://localhost:5173**.
 
 ---
-
+```
 ##  Available Scripts
 
 | Command | Description |
@@ -76,7 +76,7 @@ The app will be available at **http://localhost:5173**.
 
 ---
 
-##  My Write-Up: Decisions, Trade-offs, and Next Steps
+  My Write-Up: Decisions, Trade-offs, and Next Steps
 
 Here’s a quick overview of my design approach and technical reasoning behind key implementation choices.
 
