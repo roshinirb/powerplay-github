@@ -1,46 +1,47 @@
-# 🚀 Github Repository Finder (Assignment)
+#  Github Repository Finder (Assignment)
 
-A tiny, production-ready **React + TypeScript** micro-app that lets users search and bookmark GitHub repositories.
+ A tiny, production-ready React micro-app that lets a user search and bookmark GitHub repositories.
 
 🔗 **https://powerplay-github.vercel.app/**  
 
 ---
 
-## ✨ Features
+##  Features
 
-This project fulfills all the assignment requirements — with extra polish and UX improvements:
+ This project meets all the core requirements of the problem statement, with a few thoughtful UX
+ improvements:
 
-- 🔍 **Live GitHub Search**  
-  Debounced (500 ms) API calls to GitHub’s public `/search/repositories` endpoint.
+-  **Live GitHub Search**  
+   Search repositories with a 500ms debounced API call.
 
-- 💨 **Smooth Loading Experience**  
+-  **Smooth Loading Experience**  
   Uses skeleton loader animation instead of basic “Loading…” text.
 
-- ⭐ **Persistent Bookmarks**  
-  - Save or remove repositories by toggling the star.  
+-  **Persistent Bookmarks**  
+  - Click the star icon to save/remove bookmarks.  
   - Bookmarks are saved to **localStorage** and survive reloads.  
-  - Stored as complete repo objects for instant rendering.
+  -  Saves the full repository object for a better UX.
 
-- 🔁 **Bookmark Filter Toggle**  
+-  **Bookmark Filter Toggle**  
   - **OFF:** normal GitHub search mode.  
   - **ON:** Shows all bookmarked repositories. When the toggle is ON and the user types in the search bar,
     the app filters and displays only those bookmarked repositories that match the search term — enhancing UX.
 
-- 🌐 **Clickable Repo Titles**  
+-  **Clickable Repo Titles**  
   Open any repo on GitHub directly in a new tab.
 
-- 🧱 **Error & Empty States**  
+-  **Error & Empty States**  
   Gracefully handles all cases — idle, loading, error, and no results.
 
-- ⚡ **Optimized Performance**  
+-  **Optimized Performance**  
   Uses `React.memo`, `useCallback`, and `useMemo` to minimize re-renders.
 
-- 🧹 **Clean Tooling**  
+-  **Clean Tooling**  
   100% TypeScript, ESLint + Prettier configured, **no lint warnings**.
 
 ---
 
-## 🛠️ Getting Started
+##  Getting Started
 
 Run the project locally:
 
@@ -59,13 +60,13 @@ npm run dev
 
 ---
 
-## 🖥️ Local Setup
+##  Local Setup
 
 The app will be available at **http://localhost:5173**.
 
 ---
 
-## 📜 Available Scripts
+##  Available Scripts
 
 | Command | Description |
 |----------|-------------|
@@ -75,7 +76,7 @@ The app will be available at **http://localhost:5173**.
 
 ---
 
-## 🧠 My Write-Up: Decisions, Trade-offs, and Next Steps
+##  My Write-Up: Decisions, Trade-offs, and Next Steps
 
 Here’s a quick overview of my design approach and technical reasoning behind key implementation choices.
 
@@ -89,7 +90,7 @@ For an app of this scope, this keeps the code **lightweight, clean, and performa
 
 ---
 
-**Architecture ("Smart Container, Dumb Components")**  
+**Architecture ("Smart Container, Other Components")**  
 - `App.tsx` is the single **smart container**, responsible for all logic: fetching, filtering, bookmarking, etc.  
 - Components like `ProjectItem`, `SearchInput`, and `FilterToggle` are **presentational only** — they render UI and emit events upward.  
 - This pattern improves maintainability, reusability, and debugging clarity.
