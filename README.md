@@ -18,9 +18,9 @@
   Uses skeleton loader animation instead of basic “Loading…” text.
 
 -  **Persistent Bookmarks**  
-  - Click the star icon to save/remove bookmarks.  
-  - Bookmarks are saved to **localStorage** and survive reloads.  
-  -  Saves the full repository object for a better UX.
+   Click the star icon to save/remove bookmarks.  
+   Bookmarks are saved to **localStorage** and survive reloads.  
+   Saves the full repository object for a better UX.
 
 -  **Bookmark Filter Toggle**  
   - **OFF:** normal GitHub search mode.  
