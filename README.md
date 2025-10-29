@@ -18,13 +18,13 @@
   Uses skeleton loader animation instead of basic “Loading…” text.
 
 -  **Persistent Bookmarks**  
-   Click the star icon to save/remove bookmarks.  
-   Bookmarks are saved to **localStorage** and survive reloads.  
-   Saves the full repository object for a better UX.
+     - Click the star icon to save/remove bookmarks.  
+     - Bookmarks are saved to **localStorage** and survive reloads.  
+     - Saves the full repository object for a better UX.
 
 -  **Bookmark Filter Toggle**  
-  - **OFF:** normal GitHub search mode.  
-  - **ON:** Shows all bookmarked repositories. When the toggle is ON and the user types in the search bar,
+   - **OFF:** normal GitHub search mode.  
+   - **ON:** Shows all bookmarked repositories. When the toggle is ON and the user types in the search bar,
     the app filters and displays only those bookmarked repositories that match the search term — enhancing UX.
 
 -  **Clickable Repo Titles**  
